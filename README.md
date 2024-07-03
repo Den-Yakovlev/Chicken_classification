@@ -20,6 +20,7 @@
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Запуск файлов
 
@@ -27,3 +28,13 @@ pip install -r requirements.txt
 
 ```bash
 python chicken_train.py --train-dataset path_to_train_data --val-dataset path_to_val_data --test-dataset path_to_test_data --output-dir path_to_output_dir --model resnet50 --batch-size 16 --epochs 50 --device cuda --pretrained
+```
+
+### Предобработка
+
+Если у вас тоже есть данные, в которых надо вырезать фон, то перед тем как запустить converting.py не забудьте поменять пути dataDir и output_dir, а также путь до файла annFile с содрежанием координат силуэтов. Для запуска:
+
+```bash
+python converting.py
+
+```
